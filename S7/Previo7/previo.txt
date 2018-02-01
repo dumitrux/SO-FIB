@@ -1,0 +1,57 @@
+Redirección de entrada/salida, uso de los dispositivos lógico terminal y pipe
+
+1. fin ejecución
+2. ./es1 < previo.txt 
+
+ls -l | grep es
+-rwxrwxr-x 1 ubuntu ubuntu     0 nov 17 00:35 es1
+-rw-r--r-- 1 ubuntu ubuntu  1062 abr 19  2013 es1.c
+-rwxrwxr-x 1 ubuntu ubuntu 13096 nov 17 00:35 es2
+-rw-r--r-- 1 ubuntu ubuntu  1418 abr 19  2013 es2.c
+-rwxrwxr-x 1 ubuntu ubuntu  8816 nov 17 00:35 es3
+-rw-r--r-- 1 ubuntu ubuntu   880 nov 13  2013 es3.c
+-rwxrwxr-x 1 ubuntu ubuntu  8712 nov 17 00:35 es4
+-rw-r--r-- 1 ubuntu ubuntu  1089 abr 19  2013 es4.c
+-rwxrwxr-x 1 ubuntu ubuntu  8552 nov 17 00:35 es5
+-rw-r--r-- 1 ubuntu ubuntu    22 ene 27  2012 es5.c
+-rwxrwxr-x 1 ubuntu ubuntu  8712 nov 17 00:35 es6
+-rw-r--r-- 1 ubuntu ubuntu    99 ene 27  2012 es6.c
+-rwxrwxr-x 1 ubuntu ubuntu  8664 nov 17 00:35 es7
+-rw-r--r-- 1 ubuntu ubuntu    93 ene 30  2012 es7.c
+-rwxrwxr-x 1 ubuntu ubuntu  8768 nov 17 00:35 es8
+-rw-r--r-- 1 ubuntu ubuntu   552 ene 30  2012 es8.c
+
+Aplica ls -l y grep solo selecciona los archivos "es*".
+
+3.
+ps -e u | grep bash
+
+
+
+Formato de salida
+
+5.
+Entero en representacion interna, 4 bytes:
+B)
+Entero en formato string, 5 bytes:
+10562
+
+En la representación interna no se puede ver el número ya que no esta en codigo ASCII sino como entero, en el segundo caso se puede ver el numero.
+
+
+6.
+a.
+MyDriver1
+int read_driver_1(struct file *f, char __user *buffer, size_t s, loff_t *off);
+
+MyDriver2
+int read_driver_2(struct file *f, char __user *buffer, size_t s, loff_t *off);
+
+b.
+Major y minor son parametros de identificación de un dispositivo físico. 
+Major: indica el tipo de dispositivo.
+Minor: instancia concreta respecto al major.
+
+MyDriver1: major=249, minor=0.
+MyDriver2: major=250, minor=0.
+
