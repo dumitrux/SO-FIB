@@ -1,9 +1,5 @@
 PREGUNTA 1:
-mkdir S1
-mkdir S2
-mkdir S3
-mkdir S4
-mkdir S5
+mkdir S1 S2 S3 S4 S5
 
 PREGUNTA 2:
 ls
@@ -11,7 +7,7 @@ opcion: -a
 
 PREGUNTA 3:
 opcion: -l
-campos: 
+campos:
 1. permissions
 2. number of linked hard links
 3. owner
@@ -35,9 +31,8 @@ ls -la
 mkdir S2
 
 PREGUNTA 6:
-Cat es un concatenador. Está diseñado para coger diferents inputs e imprimirlas todas en stdout de una sola vez. Es basicamente una pipe de input a output. Se ejecuta y sale automáticamente.
-
-Less es una aplicacion para visualizar texto. Está diseñada para coger una sola input, dividirla en páginas que quepan en tu pantalla y puedes moverte hacer adelante y atrás por ellas. Mantiene el contenido de la input en memoria hasta que tú sales del programa manualmente.
+'cat': concatena ficheros y los muestra en una salida estándar.
+'less': muestra ficheros en un formato apto para un terminal(parecido a una página del man).
 
 PREGUNTA 7:
 La opción -i del comando cp significa "interactive" y hace un prompt en caso de que se vaya a sobreescribir un archivo.
@@ -46,7 +41,6 @@ comando:
 alias cp="cp -i"
 
 PREGUNTA 8:
-
 Lo mismo que la pregunta 7 para la opción -i del comando mv y el comando rm.
 
 comando:
@@ -59,11 +53,9 @@ cat: test: Permission denied
 
 chmod 444 test
 
-SI, al borrarlo salta el prompt:
+Sí, al borrarlo salta el prompt:
 rm: remove write-protected regular file 'test'? 
-haces:
-yes
-y se borra.
+y confirmas con 'yes'.
 
 PREGUNTA 10:
 PATH: Which directories to search for executables
@@ -75,12 +67,12 @@ Los dos puntos, es decir, ':'.
 
 PREGUNTA 12:
 Para definir:
-export MY_NAME="Roberto"
+export MY_NAME="MDD"
 
-Para comprobar TODAS las variables de entorno he usado:
+Para comprobar todas las variables de entornoS:
 env
 
-Para comprobar la variable MY_NAME he usado:
+Para comprobar la variable MY_NAME:
 echo $MY_NAME
 
 PREGUNTA 13:
@@ -96,4 +88,4 @@ En el caso ".:$PATH": Se ha ejecutado el falso ls.
 En el caso "$PATH:.": Se ha ejecutado el verdadero ls.
 
 PREGUNTA 16:
-'>' hace un append, es decir, añade la salida al final del archivo que le digas. En cambio, '>>' sobreescribe el archivo con la salida.
+'>>' hace un append, es decir, añade la salida al final del archivo que le digas. En cambio, '>' sobreescribe el archivo con la salida.
