@@ -1,10 +1,10 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
-#include<unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
 
 
-/* readint - Devuelve un entero leido desde teclado */
+//Devuelve un entero leido desde teclado
 int readint(void)
 {
 	char buff[100];
@@ -14,7 +14,7 @@ int readint(void)
 		perror (" ERROR leyendo numero ");
 		exit (0);
 	}
-	buff[x-1] = '\0'; //substituir \n por \0
+	buff[x-1] = '\0'; //substitucion de \n por \0
 	x = atoi (buff);
 	return x;
 }

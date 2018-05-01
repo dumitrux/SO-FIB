@@ -1,26 +1,22 @@
-34.
+Pregunta 34.
 
-Aparecen las variables globales, es decir, el "globalArray".
-
+Aparecen las variables globales, "globalArray".
 0000000000601080 B globalArray
-
 Está en la dirección de memoria 0000000000601080 y se encuentra dentro de la región de memoria de la BSS.
 
 
-35.
+Pregunta 35.
 
-El número de variables que salen cuando compilamos con librerías estáticas, comparado con las que salen cuando compilamos con librerías dinámicas es mucho mayor. Puesto que también almacena dichas librerías.
-
+El tamaño cuando se compila con librerías estáticas, comparado con el de librerías dinámicas es mucho mayor. Puesto que también almacena dichas librerías.
 La cantidad de código en assembler también es mucho mayor, por la misma razón.
-
-El tamaño de los archivos es muy diferente:
+Tamaños:
 	mem1_dynamic -> 8896 bytes
 	mem1_static -> 912888 bytes
 
-Como he dicho antes: las salidas (nm y objdump) del ejecutable compilado con librerías estáticas es mucho mayor. Debido a que almacena el código de dichas librerías en su interior.
+Las salidas (nm y objdump) del ejecutable compilado con librerías estáticas es mucho mayor. Debido a que almacena el código de dichas librerías en su interior.
 
 
-36.
+Pregunta 36.
 
 DINÁMICA
 INICIAL - FINAL 													ETIQUETA
@@ -57,16 +53,14 @@ INICIAL - FINAL 													ETIQUETA
 ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0   [vsyscall]
 
 
-La diferencia entre ambos maps es que el maps del compilado con librerías estáticas no tiene las direcciones de memoria que referencian a las librerías dinámicas dado que las contiene en su interior.
+La diferencia entre ambos es que el compilado con librerías estáticas no tiene las direcciones de memoria que referencian a las librerías dinámicas dado que las contiene en su interior.
 
 
-37.
-
-El malloc guarda les dades en el heap, ja que fa una gestió avanzada del heap.
+Pregunta 37.
+'malloc' guarda los datos en el heap, ya que hace una gestión avanzadad del heap.
 00b6c000-00b8f000 HEAP
 
-38.
-
+Pregunta 38.
 	3:
 		n_mallocs: 3
 		inicial: 01f79000
@@ -85,11 +79,10 @@ El malloc guarda les dades en el heap, ja que fa una gestió avanzada del heap.
 		final: 0194c000
 		tamaño: 0x00085000
 
-Cambia su tamaño de entrada entre 3 ó 5 y 100. Dado que como malloc reserva un valor predeterminado de memoria pues no hace ningún sbrk extra al incrementar de 3 a 5. Sin embargo 100 se sale de su previsión y se ve obligado a pedir más espacio de heap.
+Cambia el tamaño de entrada entre 3 ó 5 y 100. Dado que 'malloc' reserva un valor predeterminado de memoria y no hace ningún sbrk extra al incrementar de 3 a 5, o hace el mismo. Sin embargo con 100 al ser de mayor tamaño pide más espacio extra en el heap.
 
 
-39.
-
+Pregunta 39.
 El tamaño del HEAP es de:
 006b4000 - 00693000 = 0x00021000
 Es decir, tiene el mismo tamaño que el inicial dado que se cuando haces free, se marca el espacio de memoria del malloc como libre y se reutiliza en la siguiente iteracion del bucle.

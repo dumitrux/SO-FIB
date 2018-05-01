@@ -1,6 +1,5 @@
 Las direcciones asignadas son las que aparecen aquí a la izquierda, de todas las instrucciones del programa:
        |
-       |
        V
                  U atoi@@GLIBC_2.2.5
 0000000000601058 B __bss_start
@@ -68,6 +67,7 @@ La dirección asignada de la función suma está en la sección de código.
 El comando usado es el siguiente:
 gcc -o mem1_previo_v2 mem1_previo_v2.c -static
 
+
 mem2_previo:
     10:
 
@@ -96,6 +96,7 @@ mem2_previo:
 
         HEAP -> 01c48000 - 01c25000 = 0x00023000
         DATOS -> 
+
 
 mem2_previo_v2:
     10:
