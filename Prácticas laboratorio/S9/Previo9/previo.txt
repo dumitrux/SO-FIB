@@ -1,6 +1,6 @@
 1.
-
-- #df -T
+a) 
+#df -T
 S.ficheros     Tipo     bloques de 1K  Usados Disponibles Uso% Montado en
 udev           devtmpfs       1999860       0     1999860   0% /dev
 tmpfs          tmpfs           404424    6144      398280   2% /run
@@ -11,14 +11,13 @@ tmpfs          tmpfs          2022108       0     2022108   0% /sys/fs/cgroup
 tmpfs          tmpfs           404424     120      404304   1% /run/user/1000
 /dev/sdb1      fuseblk       30309436  257832    30051604   1% /media/ubuntu/MDD
 
-- #df -i
-- #df -h
-
-
+b)
+#df -i
+c) 
+#df -h
 
 
 2.
-
 pr.txt:
 Fichero: 'pr.txt'
 fichero regular

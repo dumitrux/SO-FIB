@@ -1,13 +1,11 @@
-68. 
-
-·
+Pregunta 68.
+1)
 ln $HOME/A $HOME/A/H 
 ln: /home/alumne/A: hard link not allowed for directory
 Porque intenta crear un hard link al directorio en el que nos encontramos.
 
 
-
-·
+2)
 #stat D:
 File: 'D'regular file, Size: 25, Inode: 745477, Links: 2., Access: (0664/-rw-rw-r--).
 Es un fichero de datos.
@@ -24,7 +22,7 @@ Es un enlace simbólico, que nos direcciona al fichero D de la carpeta A.
 File: 'G'regular file, Size: 25, Inode: 745477, Links: 2, Access: (0664/-rw-rw-r--).
 Es un 'hard link' direccionado al fichero de datos D.
 
-·
+3)
 #more D
 estoy en el directorio A
 #readlink D
@@ -49,8 +47,7 @@ estoy en el directorio A
 Hard link, que nos muestra su contenido y nada cuando le pregunatamos sobre a quien apunta.
 
 
-
-·
+4)
 #echo $HOME/A/F
 /home/alumne/A/F
 #namei E
@@ -82,7 +79,7 @@ D
 Solo apunta al fichero.
 
 
-·
+5)
 #ln -s ami ami
 
 #cat ami
