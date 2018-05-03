@@ -1,5 +1,4 @@
-SESIÓN 1: EL INTÉRPRETE DE COMANDOS: SHELL(Bash)
-
+## SESIÓN 1: EL INTÉRPRETE DE COMANDOS: SHELL(Bash)
 
 Prompt, texto que aparece en la shell, indica que está lista para recibir nuevos comandos.
 
@@ -9,16 +8,15 @@ Prompt, texto que aparece en la shell, indica que está lista para recibir nuevo
 Comandos de sistema para modificar/navegar por el sistema de ficheros: cd, ls, mkdir, cp, rm, rmdir, mv.
 Comandos de sistema y programas de sistema para acceder a ficheros: less, cat, grep, gedit.
 
-· &: ejecutar programa en background.
-· >: redirecciona la salida de datos a un fichero.
-· >>: redirecciona la salida de datos a un fichero sin sobreescribir.
-· <: redirecciona la entrada desde un fichero.
-· /: buscar dentro del man.
-· .fichero: ficheros ocultos.
-· .: hace referencia al directorio en el que se está en ese momento.
-· ..: hace referencia al directorio de nivel inmediatamente superior al que se está.
-· *: se substituye por cualquier grupo de caracteres excepto '.'.
-
+	&: ejecutar programa en background.
+	>: redirecciona la salida de datos a un fichero.
+	>>: redirecciona la salida de datos a un fichero sin sobreescribir.
+	<: redirecciona la entrada desde un fichero.
+	/: buscar dentro del man.
+	.fichero: ficheros ocultos.
+	.: hace referencia al directorio en el que se está en ese momento.
+	..: hace referencia al directorio de nivel inmediatamente superior al que se está.
+	*: se substituye por cualquier grupo de caracteres excepto '.'.
 
 
 · man: accede a manuales on-line.
@@ -90,11 +88,9 @@ Pertenecen al contexto. Similares a las constantes que se definen en un programa
 Comprimir: #tar zcfv fichero.tar.gz fichero1.txt fichero.c
 Descomprimir: #tar zxfv S2.tar.gz
 
+--------------------------------------------------------------------------------------
 
-
-
-
-SESIÓN 2:EL LENGUAJE C
+## SESIÓN 2:EL LENGUAJE C
 
 Uso de Usage(), si no se entra los parametros adecuados poner por salida el funcionamiento del programa.
 También muestra el uso de las cabeceras y como unir todo.
@@ -134,11 +130,9 @@ C:
 · Punteros pueden ser cualquier cosa, a entero(int *), a char(char +) o puntero "genérico" (void *). int x = 4;int *p=&x;
 	char buffer[32] ->(punteros) buffer == &buffer[0]
 
+--------------------------------------------------------------------------------------
 
-
-
-
-SESIÓN 3: PROCESOS
+## SESIÓN 3: PROCESOS
 
 Comprobación de errores con perror.
 
@@ -171,12 +165,9 @@ Comprobación de errores con perror.
 	exe: archivo es un enlace simbólico que contiene la ruta real del comando ejecutado.
 	status: proporciona información (name, state, TID, PPID, etc).
 
+--------------------------------------------------------------------------------------
 
-
-
-
-SESIÓN 4: COMUNICACIÓN DE PROCESOS
-
+## SESIÓN 4: COMUNICACIÓN DE PROCESOS
 
 · sigaction: reprograma la acción asociada a un evento conctreto. La llegada de SIGKILL o SIGSTOP no se puede reprogramar.
 struct sigaction {
@@ -206,12 +197,9 @@ struct sigaction {
 · waitpid: espera la finalización de un proceso.
 	WNOHANG: regresa inmediatamente si ningún hijo ha salido.
 
+--------------------------------------------------------------------------------------
 
-
-
-
-SESIÓN 5: GESTIÓN DE MEMORIA
-
+## 3SESIÓN 5: GESTIÓN DE MEMORIA
 
 · gcc: compilador de C.
 	-static: compla el fichero de forma estatica("librerias propias").
@@ -224,10 +212,9 @@ SESIÓN 5: GESTIÓN DE MEMORIA
 · free: función de la librería de C que libera una región de memoria lógica.
 · sbrk: llamada a sistema que modifica el tamaño de la sección de datos.
 
+--------------------------------------------------------------------------------------
 
-
-SESIÓN 7: GESTIÓN DE ENTRADA/SALIDA
-
+## SESIÓN 7: GESTIÓN DE ENTRADA/SALIDA
 
 · mknod: comando que crea un fichero especial.
 	c: create a character (unbuffered) special.
@@ -249,9 +236,10 @@ SESIÓN 7: GESTIÓN DE ENTRADA/SALIDA
 	-c: count times, calls, an errors for each system call and report a summary on program exit.
 	-o: guarda la informacion en el fichero especificado.
 
+--------------------------------------------------------------------------------------
 
+## SESIÓN 8: GESTIÓN DE ENTRADA/SALIDA
 
-SESIÓN 8: GESTIÓN DE ENTRADA/SALIDA
 · mknod: comando que crea un fichero especial.
 	P:
 · mknod: llamada al sistema que crea un fichero especial
@@ -269,10 +257,9 @@ SESIÓN 8: GESTIÓN DE ENTRADA/SALIDA
 · accept: acepta una conexión en un socket.
 · connect: inicia una conexión a un socket.
 
+--------------------------------------------------------------------------------------
 
-
-
-SESIÓN 9: SISTEMA DE FICHEROS
+## SESIÓN 9: SISTEMA DE FICHEROS
 
 · open/creat: abre/crea un fichero o dispositivo.
     O_CREAT: si el fichero no existe se crea.
